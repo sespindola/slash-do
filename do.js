@@ -74,6 +74,6 @@ function working(callback) {
 }
 
 function usage(callback) {
-  callback(null, { text: `Unknown command.\nUsage: /wt do command [args]` });
+  var message = "Usage: /wt do command [args]. Where command is one of the following:\n\tinfo:\tshows account information\n\tlist:\tlists all droplets\n\tstop dropletid:\tgracefully shutdowns the droplet identified by the droplet id passed as a parameter\n\tstart dropletid:\tboots the droplet identified by the droplet id passed as a parameter\n"
+  callback(null, { text: `Unknown command.\n${message}` });
 }
-
